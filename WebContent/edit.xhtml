@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+	<link rel="stylesheet" href="resources/css/index.css"></link>
+</h:head>
+<body>
+<p:breadCrumb>
+		<p:menuitem value="HOME" url="index.xhtml" />
+		<p:menuitem value="HOME" url="index.xhtml" />
+		<p:menuitem value="ADD ETUDIANT" url="Add.xhtml" />
+		<p:menuitem value="EDIT ETUDIANT" url="edit.xhtml" />
+
+	</p:breadCrumb>
+	
+	<h3>EDIT ETUDIANT</h3>
+	<h:form>
+
+		<p:dataTable value="#{beanEtudiant.LEtudiant}" var="e">
+			<p:column>
+				<f:facet name="header">id</f:facet>
+				<p:inputText value="#{e.id}" />
+
+			</p:column>
+			<p:column>
+				<f:facet name="header">nom</f:facet>
+				<p:inputText value="#{e.nom}" />
+
+			</p:column>
+			<p:column>
+
+
+				<f:facet name="header">prenom</f:facet>
+				<p:inputText value="#{e.prenom}" />
+
+			</p:column>
+
+			<p:column>
+
+				<f:facet name="header">id filiere</f:facet>
+				<p:inputText value="#{e.ID_FIL}" />
+
+			</p:column>
+
+			<p:column>
+				<f:facet name="header">update</f:facet>
+				<p:commandButton action="#{beanEtudiant.update2()}" value="update">
+				</p:commandButton>
+
+
+			</p:column>
+
+
+
+		</p:dataTable>
+
+
+	</h:form>
+</body>
+</html>

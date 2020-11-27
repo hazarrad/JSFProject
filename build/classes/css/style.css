@@ -1,0 +1,17 @@
+@charset "ISO-8859-1";
+
+.tablelayout{
+	width: 800px;
+	height: 100vh;
+	margin: auto;
+	
+}
+
+.tdheader{
+	height: 50px;
+	background-color: blue;
+}
+
+.tdmenu{
+	
+}
