@@ -1,0 +1,25 @@
+@charset "ISO-8859-1";
+
+
+body{
+	background: #ff8080;
+		text-align: center;
+	
+	
+}
+
+
+#form{
+	
+	background-color: white;
+	width: 50%;
+	margin: auto;
+	font-size: 20px;
+	border-collapse: collapse;
+	border-color: black;
+	margin-top: 50px;
+	height: 400px;
+	text-align: center;
+	
+}
+

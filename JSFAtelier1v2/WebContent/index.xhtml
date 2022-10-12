@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+
+
+<head>
+<title>Add personne</title>
+	
+	<link rel="stylesheet" href="css/index.css"></link>
+	
+
+</head>
+
+
+
+<body>
+
+	<h:form id="form" >
+		<h:outputLabel value="Cin :" />.
+		<h:inputText value="#{beanper.ps.CIN}" />
+		<br />
+		<br />
+		<h:outputLabel value="nom :" />
+		<h:inputText value="#{beanper.ps.NOM}" />
+		<br />
+		<br />
+		<h:outputLabel value="prenom :" />
+		<h:inputText value="#{beanper.ps.PRENOM}" />
+		<br />
+		<br />
+		<h:outputLabel value="SEXE :" />
+		<h:selectOneRadio value="#{beanper.ps.SEXE}">
+			<f:selectItem itemValue="homme" itemLabel="Homme" />
+			<f:selectItem itemValue="femme" itemLabel="Femme" />
+		</h:selectOneRadio>
+
+		<h:commandButton action="#{beanper.Enregestrer()}" value="Enregistrer" />
+	</h:form>
+
+</body>
+</html>
