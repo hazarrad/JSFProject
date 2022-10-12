@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+      
+<h:head>
+	<title>Exemple 1</title>	
+</h:head>
+
+<body>
+
+<h:form>
+<p:growl id="growl" life="2000" showDetail="true"/>
+
+<p:panel>
+	<f:facet name="header"> Ajouter un Client</f:facet>
+	<p:outputLabel value="Nom : "/>
+	<p:inputText value="#{exempleDataTable.nom}"/>
+	<p:outputLabel value="Prenom : "/>
+	<p:inputText value="#{exempleDataTable.prenom}"/>
+	<p:commandButton action="#{exempleDataTable.ajouter}" value="Ajouter client" update="@form"/>
+</p:panel>
+
+<p:dataTable id="table" value="#{exempleDataTable.cls}" 
+		var="client" emptyMessage="Pas de clients dans la BD">
+
+	<f:facet name="header"> Tableau des clients</f:facet>
+	<p:column>
+		<f:facet name="header">ID</f:facet>
+		#{client.id}
+	</p:column>
+	
+	<p:column>
+		<f:facet name="header">Nom</f:facet>
+		#{client.nom}
+	</p:column>
+	
+	<p:column>
+		<f:facet name="header">Prenom</f:facet>
+		#{client.prenom}
+	</p:column>
+	
+	<p:column>
+		<f:facet name="header">Actions</f:facet>
+		<p:commandButton icon="ui-icon-trash" onclick="PF('cdial').show();">
+		</p:commandButton>
+	</p:column>
+
+</p:dataTable>
+
+	<p:confirmDialog widgetVar="cdial" showEffect="fade" hideEffect="fade">
+        <p:commandButton value="Yes" action="#{exempleDataTable.remove}" type="button" styleClass="ui-confirmdialog-yes" icon="pi pi-check" />
+        <p:commandButton value="No" type="button" styleClass="ui-confirmdialog-no" icon="pi pi-times" />
+    </p:confirmDialog>  
+
+
+
+</h:form>
+</body>
+		
+</html>

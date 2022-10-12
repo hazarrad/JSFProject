@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+</h:head> 
+<body> 
+<h:form>
+<h:dataTable value="#{beanPersonne.personnes}" var="p">
+	<h:column>
+		<f:facet name="header">CIN</f:facet>
+		#{p.cin}
+	</h:column>
+	<h:column>
+		<f:facet name="header">Nom</f:facet>
+		#{p.nom}
+	</h:column>
+	<h:column>
+		<f:facet name="header">Prenom</f:facet>
+		#{p.prenom}
+	</h:column>
+	<h:column>
+		<f:facet name="header">Sexe</f:facet>
+		#{p.sexe}
+	</h:column>
+	
+	<h:column>
+		<h:commandLink action="#{beanPersonne.modifier}" value="Modifier" >
+			<f:setPropertyActionListener value="#{p.cin}" target="#{beanPersonne.cin}" />
+		</h:commandLink>
+	</h:column>
+	<h:column>
+		<h:commandLink action="#{beanPersonne.supprimer}" value="Supprimer">
+			<f:setPropertyActionListener value="#{p.cin}" target="#{beanPersonne.cin}" />
+		</h:commandLink>
+	</h:column>
+</h:dataTable>
+<h:commandButton action="savepers" value="Nouvelle Personne" />
+</h:form>
+</body> 
+</html>

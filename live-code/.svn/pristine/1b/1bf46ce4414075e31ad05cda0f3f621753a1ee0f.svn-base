@@ -1,0 +1,20 @@
+2019-12-25 10:58:17,855 FATAL [main] - com.everis.day13.log4j.Main.main 11 - fatal log
+2019-12-25 10:58:17,855 ERROR [main] - com.everis.day13.log4j.Main.main 12 - error log
+2019-12-25 10:58:17,855  WARN [main] - com.everis.day13.log4j.Main.main 13 - warn log
+2019-12-25 10:58:17,871  INFO [main] - com.everis.day13.log4j.Main.main 14 - info log
+2019-12-25 10:58:17,871 DEBUG [main] - com.everis.day13.log4j.Main.main 15 - debug log
+2019-12-25 10:58:17,871 TRACE [main] - com.everis.day13.log4j.Main.main 16 - trace log
+2019-12-25 11:00:48,918 FATAL [main] - com.everis.day13.log4j.Main.main 11 - fatal log2019-12-25 11:00:48,918 ERROR [main] - com.everis.day13.log4j.Main.main 12 - error log2019-12-25 11:00:48,918  WARN [main] - com.everis.day13.log4j.Main.main 13 - warn log2019-12-25 11:00:48,918  INFO [main] - com.everis.day13.log4j.Main.main 14 - info log2019-12-25 11:00:48,918 DEBUG [main] - com.everis.day13.log4j.Main.main 15 - debug log2019-12-25 11:00:48,918 TRACE [main] - com.everis.day13.log4j.Main.main 16 - trace log2019-12-25 11:01:25,300 FATAL [main] - com.everis.day13.log4j.Main.main 11 - fatal log
+2019-12-25 11:01:25,300 ERROR [main] - com.everis.day13.log4j.Main.main 12 - error log
+2019-12-25 11:01:25,300  WARN [main] - com.everis.day13.log4j.Main.main 13 - warn log
+2019-12-25 11:01:25,300  INFO [main] - com.everis.day13.log4j.Main.main 14 - info log
+2019-12-25 11:01:25,300 DEBUG [main] - com.everis.day13.log4j.Main.main 15 - debug log
+2019-12-25 11:01:25,300 TRACE [main] - com.everis.day13.log4j.Main.main 16 - trace log
+2019-12-25 11:02:09,867 FATAL [main] - com.everis.day13.log4j.Main.main 11 - fatal log
+2019-12-25 11:02:09,867 ERROR [main] - com.everis.day13.log4j.Main.main 12 - error log
+2019-12-25 11:02:09,867  WARN [main] - com.everis.day13.log4j.Main.main 13 - warn log
+2019-12-25 11:02:09,867  INFO [main] - com.everis.day13.log4j.Main.main 14 - info log
+2019-12-25 11:02:09,867 DEBUG [main] - com.everis.day13.log4j.Main.main 15 - debug log
+2019-12-25 11:02:09,867 TRACE [main] - com.everis.day13.log4j.Main.main 16 - trace log
+2019-12-25 11:04:24,688 FATAL [main] - com.everis.day13.log4j.Main.main 11 - fatal log
+2019-12-25 11:04:24,688 ERROR [main] - com.everis.day13.log4j.Main.main 12 - error log
