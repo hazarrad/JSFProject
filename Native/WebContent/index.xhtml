@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+	<link rel="stylesheet" href="resources/css/index.css"></link>
+	
+
+</h:head>
+<body>
+
+
+	<p:breadCrumb>
+		<p:menuitem value="HOME" url="index.xhtml" />
+		<p:menuitem value="HOME" url="index.xhtml" />
+		<p:menuitem value="ADD ETUDIANT" url="Add.xhtml" />
+		<p:menuitem value="EDIT ETUDIANT" url="edit.xhtml" />
+
+	</p:breadCrumb>
+	
+	<h3>ALL ETUDIANT</h3>
+	<h:form>
+		<p:dataTable value="#{beanEtudiant.LEtudiant}" var="e" style="width: 100%">
+			<p:column>
+				<f:facet name="header">id</f:facet>
+				#{e.id}
+			</p:column>
+			<p:column>
+				<f:facet name="header">nom</f:facet>
+				#{e.nom}
+			</p:column>
+			<p:column>
+				<f:facet name="header">prenom</f:facet>
+				#{e.prenom}
+			</p:column>
+
+			<p:column>
+				<f:facet name="header">id_fil</f:facet>
+				#{e.ID_FIL}
+			</p:column>
+
+			<p:column>
+				<p:commandButton action="#{beanEtudiant.delete()}" value="Supprimer">
+					<f:setPropertyActionListener value="#{e.id}"
+						target="#{beanEtudiant.etudiant.id}" />
+				</p:commandButton>
+
+
+			</p:column>
+
+
+
+		</p:dataTable>
+	</h:form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<hibernate-configuration>
+ <session-factory >
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/task_management</property>
+  <property name="hibernate.connection.username">root</property>
+  <property name="hibernate.connection.password">prefab</property>
+  <property name="hibernate.default_schema">task_management</property>
+  <!-- SQL dialect -->
+  <property name="dialect">org.hibernate.dialect.MariaDBDialect</property>
+  <property name="hbm2ddl.auto">update</property>
+  <property name="hibernate.show_sql">true</property>
+  
+  
+   <mapping resource="hbm/Employee.hbm.xml"></mapping>
+  <mapping resource="hbm/Project.hbm.xml"></mapping>
+  <mapping resource="hbm/Task.hbm.xml"></mapping>
+  <mapping resource="hbm/Center.hbm.xml"></mapping>
+  <mapping resource="hbm/Client.hbm.xml"></mapping>
+  <mapping resource="hbm/Technology.hbm.xml"></mapping>
+  <mapping resource="hbm/User.hbm.xml"></mapping>
+
+ </session-factory>
+</hibernate-configuration>

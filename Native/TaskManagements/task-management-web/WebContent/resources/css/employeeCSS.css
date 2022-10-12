@@ -1,0 +1,102 @@
+	
+	/*-------------------------< Menu CSS >---------------------------*/	
+		
+	ul, menu, nav {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	
+	ol, ul {
+		list-style: none;
+	}
+	
+	blockquote, q {
+		quotes: none;
+	}
+	
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	
+	header h2 {
+		margin: 25px 10px;
+		font-size: 28px;
+		text-align: center;
+		color: cornsilk;
+	}
+	
+	.menuContainer {
+		margin: 10px auto;
+		display: table;
+		max-width: 1140px;
+		width: 100%;
+	}
+	
+	nav.menu {
+		background: coral;
+		position: relative;
+		min-height: 45px;
+		height: 100%;
+	}
+	
+	.menu>ul>li {
+		list-style: none;
+		display: inline-block;
+		color: #fff;
+		line-height: 45px;
+	}
+	
+	.menu>ul li a{
+		text-decoration: none;
+		font-weight: bold;
+		color: #fff;
+		display: block;
+		padding: 0px 24px;
+	}
+	
+	.menu>ul li a:hover {
+		background: #435d7d;
+		color: #fff;
+		transition-duration: 0.3s;
+		-moz-transition-duration: 0.3s;
+		-webkit-transition-duration: 0.3s;
+	}
+	
+	.active {
+		background: #435d7d !important;
+	}
+	
+	.displaynone {
+		display: none;
+	}
+	
+	
+	/*-------------------------< AddEmployeeForm CSS >---------------------------*/
+	
+	.column {
+	  float: left;
+	  width: 50%;
+	  padding: 10px;
+	  /*height: 300px;  Should be removed. Only for demonstration */
+	}
+	
+	/* Clear floats after the columns */
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+	
+	#successMessage, #errorMessage {
+		margin: 10px auto;
+		margin-top: 30px;
+		display: table;
+		max-width: 1140px;
+		width: 100%;
+	}
+	

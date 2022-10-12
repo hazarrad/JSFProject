@@ -1,0 +1,80 @@
+
+	
+	/*------------------------------ Ajouter Employee ------------------------------*/
+	
+	function showAddEmployeeForm()
+	{
+		//alert('some anchor clicked');
+		//$("#editEmployeeButton").hide();
+		//$("#addEmployeeButton").show();
+		$('#tableContainer').hide();
+		$("#addEmployeeFormDiv").show();
+	}
+	
+	function showEmployeeList()
+	{
+		$("#addEmployeeFormDiv").hide();
+		$("#editEmployeeFormDiv").hide();
+		$('#tableContainer').show();
+	}
+	
+	
+	
+	function showEditEmployeeForm(id)
+	{
+		$('#tableContainer').hide();
+		$("#editEmployeeFormDiv").show();
+		//$("#addEmployeeButton").hide();
+		//$("#editEmployeeButton").show();
+		
+		var idsInputs = ["#numberEdited", "#firstNameEdited", "#lastNameEdited", "#gradeEdited", "#profileEdited", "#intergrationDateEdited", "#emailEdited", "#passwordEdited"];
+		var i=0;
+		console.log("================ id = "+id);
+		
+		//$("#tableClient").children("tbody ."+id)
+		$('#tableEployee tbody tr .'+id).each(function()
+		{
+			var value = $(this).html();
+			
+			
+			
+			$(idsInputs[i]).val(value);
+			//$(idsInputs[i]).parent("div").children("label").addClass("active");
+			
+			console.log("--- value "+value);
+			i++;
+		});
+		
+		$('#editEmployeeForm').append('<input id="idEmployee" type="text" value="'+id+'"  hidden/>');
+	}
+	
+	function showEditProjectForm(id)
+	{
+		$('#tableContainer').hide();
+		$("#editEmployeeFormDiv").show();
+		//$("#addEmployeeButton").hide();
+		//$("#editEmployeeButton").show();
+		
+		var idsInputs = ["#name", "#startDate", "#endDate", "#description"];
+		var i=0;
+		console.log("================ id = "+id);
+		
+		//$("#tableClient").children("tbody ."+id)
+		$('#tableEployee tbody tr .'+id).each(function()
+		{
+			var value = $(this).html();
+			
+			
+			
+			$(idsInputs[i]).val(value);
+			//$(idsInputs[i]).parent("div").children("label").addClass("active");
+			
+			console.log("--- value "+value);
+			i++;
+		});
+		
+		$('#editEmployeeForm').append('<input id="id" type="text" value="'+id+'"  hidden/>');
+	}
+	
+	
+	

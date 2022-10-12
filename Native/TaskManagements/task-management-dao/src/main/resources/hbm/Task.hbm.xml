@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping package="com.everis.taskmanagement.model">
+   <class name = "Task" table = "Task">
+      
+      <meta attribute = "class-description">
+         This class contains the task detail. 
+      </meta>
+      
+       <id name="id" column="id">
+	     <generator class="increment"/>
+      </id>
+	  <property name = "name"/>
+	  <property name = "startDate"/>
+	  <property name = "endDate"/>
+	  <property name = "duration"/>
+	  <property name = "type"/>
+	  <property name = "description"/>
+
+   </class>
+</hibernate-mapping>

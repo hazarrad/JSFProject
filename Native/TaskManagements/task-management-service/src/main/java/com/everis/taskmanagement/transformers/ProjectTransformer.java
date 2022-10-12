@@ -1,0 +1,36 @@
+package com.everis.taskmanagement.transformers;
+
+import java.util.Date;
+
+import com.everis.taskmanagement.dto.ProjectDTO;
+import com.everis.taskmanagement.model.Project;
+
+public class ProjectTransformer extends AbstractTransformer<ProjectDTO, Project>{
+
+	@Override
+	public ProjectDTO toDTO(Project entity) {
+		ProjectDTO dto = new ProjectDTO();
+		
+		dto.setId(entity.getId());
+		dto.setName(entity.getName());
+		dto.setStartDate(entity.getStartDate());
+		dto.setEndDate(entity.getEndDate());
+		dto.setDescription(entity.getDescription());
+		
+		return dto;
+	}
+
+	@Override
+	public Project toEntity(ProjectDTO dto) {
+		Project entity = new Project();
+		
+		entity.setId(dto.getId());
+		entity.setName(dto.getName());
+		entity.setStartDate(dto.getStartDate());
+		entity.setEndDate(dto.getEndDate());
+		entity.setDescription(dto.getDescription());
+		
+		return entity;
+	}
+
+}

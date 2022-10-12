@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+	<link rel="stylesheet" href="resources/css/index.css"></link>
+	
+
+</h:head>
+<body>
+
+
+	
+	<h3>ALL Employe</h3>
+	<h:form>
+		<p:dataTable value="#{beanEmploye.all}" var="o" style="width: 100%">
+			<p:column>
+				<f:facet name="header">id</f:facet>
+				#{o.id}
+			</p:column>
+			<p:column>
+				<f:facet name="header">Nom</f:facet>
+				#{o.NOM}
+			</p:column>
+			<p:column>
+				<f:facet name="header">Prenom</f:facet>
+				#{o.PRENOM}
+			</p:column>
+
+			<p:column>
+				<f:facet name="header">Tel</f:facet>
+				#{o.TEL}
+			</p:column>
+			
+			
+			<p:column>
+				<f:facet name="header">Tel</f:facet>
+				#{o.TEL}
+			</p:column>
+
+
+
+
+
+		</p:dataTable>
+			<p:commandButton action="Add.xhtml" value="Add" />
+		
+	</h:form>
+</body>
+</html>

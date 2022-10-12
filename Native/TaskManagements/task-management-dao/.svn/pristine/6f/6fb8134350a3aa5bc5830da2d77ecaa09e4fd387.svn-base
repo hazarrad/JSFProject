@@ -1,0 +1,7 @@
+package com.everis.taskmanagement.dao;
+
+import com.everis.taskmanagement.model.Project;
+
+public interface ProjectDAO extends GenericDAO<Long, Project>{
+
+}

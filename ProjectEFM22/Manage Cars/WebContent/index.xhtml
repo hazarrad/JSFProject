@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+</h:head>
+<body>
+	<h:form>
+
+		<p:dataTable value="#{beanMarque.LMarque}" var="m">
+			<p:column>
+				<f:facet name="header">Id</f:facet>
+				#{m.code}
+			</p:column>
+			<p:column>
+				<f:facet name="header">Libelle</f:facet>
+				#{m.libelle}
+			</p:column>
+			
+			
+			
+
+		</p:dataTable>
+		
+	<h:commandButton value="Enter" action="index2?faces-redirect=true" />
+	</h:form>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+<!-- 	<bean id="employeeDAO" class="com.everis.taskmanagement.dao.impl.EmployeeDAOImpl"></bean> 
+ 	<bean id="employeeService" class="com.everis.taskmanagement.service.impl.EmployeeServiceImpl">
+ 	      <property name="employeeDAO" ref="employeeDAO" />
+ 	</bean> 
+ 	
+ 	<bean id="centerDAO" class="com.everis.taskmanagement.dao.impl.CenterDAOImpl"></bean> 
+ 	<bean id="centerService" class="com.everis.taskmanagement.service.impl.CenterServiceImpl">
+ 	      <property name="centerDAO" ref="centerDAO" />
+ 	</bean> -->
+ 	
+ 	<bean id="clientDAO" class="com.everis.taskmanagement.dao.impl.ClientDAOImpl"></bean> 
+ 	<bean id="clientService" class="com.everis.taskmanagement.service.impl.ClientServiceImpl">
+ 	      <constructor-arg ref="clientDAO"/>
+ 	</bean>
+ 	
+ 	<bean id="ProjectDAO" class="com.everis.taskmanagement.dao.impl.ProjectDAOImpl"></bean> 
+ 	<bean id="ProjectService" class="com.everis.taskmanagement.service.impl.ProjectServiceImpl">
+ 	      <constructor-arg ref="ProjectDAO"/>
+ 	</bean>
+ 	
+ 	<!-- <bean id="projectDAO" class="com.everis.taskmanagement.dao.impl.ProjectDAOImpl"></bean> 
+ 	<bean id="projectService" class="com.everis.taskmanagement.service.impl.ProjectServiceImpl">
+ 	      <property name="projectDAO" ref="projectDAO" />
+ 	</bean>
+ 	
+ 	<bean id="taskDAO" class="com.everis.taskmanagement.dao.impl.TaskDAOImpl"></bean> 
+ 	<bean id="taskService" class="com.everis.taskmanagement.service.impl.TaskServiceImpl">
+ 	      <property name="taskDAO" ref="taskDAO" />
+ 	</bean>
+ 	
+ 	<bean id="technologyDAO" class="com.everis.taskmanagement.dao.impl.TechnologyDAOImpl"></bean> 
+ 	<bean id="technologyService" class="com.everis.taskmanagement.service.impl.TechnologyServiceImpl">
+ 	      <property name="technologyDAO" ref="technologyDAO" />
+ 	</bean>
+ 	
+ 	<bean id="userDAO" class="com.everis.taskmanagement.dao.impl.UserDAOImpl"></bean> 
+ 	<bean id="userService" class="com.everis.taskmanagement.service.impl.UserServiceImpl">
+ 	      <property name="userDAO" ref="userDAO" />
+ 	</bean>  -->
+ 	
+ 		<context:component-scan
+		base-package="com.everis.taskmanagement.service" />
+		<context:component-scan
+		base-package="com.everis.taskmanagement.service.impl" />
+	    <context:component-scan
+		base-package="com.everis.taskmanagement.dao" />
+		<context:component-scan
+		base-package="com.everis.taskmanagement.dao.impl" />
+		<context:component-scan
+		base-package="com.everis.taskmanagement.servlet" />
+
+</beans>

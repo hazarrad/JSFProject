@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+
+<h:head>
+	<link rel="stylesheet" href="resources/css/index.css"></link>
+
+</h:head> 
+<body> 
+
+
+	
+	<h3>AJOUTER ETUDIANT</h3>
+<h:form>
+	<p:outputLabel value="Nom :" />
+	<p:inputText value="#{beanEmploye.employe.NOM}" /><br/><br/>
+	
+	<p:outputLabel value="Prenom :" />
+	<p:inputText value="#{beanEmploye.employe.PRENOM}" /><br/><br/>
+	
+	<p:outputLabel value="filiere :" />
+	<p:inputText value="#{beanEmploye.employe.TEL}" /><br/><br/>
+	
+	<h:outputLabel value="FONCTION :" />
+		<h:selectOneRadio value="#{beanEmploye.employe.FONCTION}" >
+			<f:selectItem itemValue="FONCTION" itemLabel="FONCTION" />
+			<f:selectItem itemValue="Administrateur" itemLabel="Administrateur" />
+		</h:selectOneRadio>
+	 
+	<br/><br/><br/>
+	<p:commandButton action="#{beanEmploye.saveUser()}" value="Sauvegarder" />
+
+</h:form>
+</body> 
+</html>

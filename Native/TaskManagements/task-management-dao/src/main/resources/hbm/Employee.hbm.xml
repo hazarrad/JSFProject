@@ -1,0 +1,26 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping package="com.everis.taskmanagement.model">
+   <class name = "Employee" table = "Employee">
+      <meta attribute = "class-description">
+         This class contains the employee detail. 
+      </meta>
+      
+      <id name="id" column="id">
+          <generator class="increment"/>
+      </id>
+      
+      <property name = "number" />
+      <property name = "firstName" />
+      <property name = "lastName"/>
+      <property name = "grade" />
+	  <property name = "email" />
+	  <property name = "password"/>
+	  <property name = "profile" />
+	  <property name = "intergrationDate" />
+      
+   </class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping package="com.everis.taskmanagement.model">
+   <class name = "User" table = "User">
+      
+      <meta attribute = "class-description">
+         This class contains the user detail. 
+      </meta>
+      
+      <id name="id" column="id">
+	     <generator class="increment"/>
+      </id>
+      <property name = "username"/>
+	  <property name = "password"/>
+   </class>
+</hibernate-mapping>
